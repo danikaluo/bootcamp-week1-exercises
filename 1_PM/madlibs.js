@@ -11,8 +11,16 @@ const verb1 = ______
 Change thses values to generate a different story
 */
 
-const story = `
-**replace this with your story using a template string**
-`
+const noun1 = 'cowgirl'
+const animal1 = 'zerbra'
+const verb1 = 'hit'
+const place1 = 'mars'
+const animal2 = 'pikachu'
+const adjective1 = 'pretty'
+const verb2 = 'jump'
+const game1 = 'Candyland'
+
+
+const story = `All of my ${noun1} I wanted a ${animal1} to ${verb1} with in the ${place1}. A ${animal2} would be so ${adjective1}, soft, and cuddly. We would ${verb2} ${game1} together every afternoon.`
 
 console.log(story)

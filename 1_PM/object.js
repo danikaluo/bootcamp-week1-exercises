@@ -10,7 +10,21 @@ const assert = require('assert')
  */
 
 const hasFalsyValue = obj => {
-};
+  let result = false;
+  Object.values(obj).forEach(val => {
+    if (val === Object(val)) {
+      if (hasFalsyValue(val)) {
+        result = true;
+      }
+    }
+    else {
+      if (!val) {
+        result = true;
+      }
+    }
+  })
+  return result
+}
 
 const falsyObj = {
   hi: "I am falsy somewhere...",
