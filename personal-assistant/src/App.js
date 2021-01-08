@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
+import {ThemeProvider} from 'styled-components'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import theme from './theme'
+import Navbar from './components/Navbar'
+import AllTodo from './containers/AllTodo';
+import Weather from './containers/Weather';
 
 const App = () => (
-  <div>
-    Beep boop hi there, I&apos;m your personal assistant hehe
-  </div>
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <Navbar>
+        <Switch>
+          <Route path='/alltodo' component={AllTodo}/>
+          <Route path='/' component={Weather}/>
+        </Switch>
+      </Navbar>
+    </BrowserRouter>
+  </ThemeProvider>
 )
 
-export default App
+export default App;
